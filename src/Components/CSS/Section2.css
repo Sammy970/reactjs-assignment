@@ -1,34 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 .container {
-    /* background-color: rebeccapurple; */
-    width: 500px;
-    height: 700px;
+  /* background-color: rebeccapurple; */
+  /* width: 500px; */
+  /* height: 700px; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 385px;
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: bold;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
 
-.heading-text {
-    margin-top: 80px;
+p {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  color: #000000;
+}
+
+label {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  color: #000000;
 }
 
 button {
-    background-color: #FFFFFF;
-    height: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
+  background-color: #ffffff;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 180px;
+  height: 36px;
+  color: #858585;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  border-radius: 10px;
 }
 
 .login-container {
-    /* margin-top: -20px; */
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    /* padding: 40px; */
+  /* margin-top: -20px; */
+  background-color: #ffffff;
+  border-radius: 20px;
+  /* padding: 20px; */
+  width: 385px;
 }
 
 .details {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  /* padding-bottom: 20px; */
+}
+
+.inputBox {
+  border: 2px solid #f5f5f5;
+  background-color: #f5f5f5;
+  /* width: 325px; */
+  height: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+}
+
+.inputBox2 {
+  background-color: #eaeaea;
+  /* width: 325px; */
+  height: 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.sign-in-btn {
+  background-color: #000000;
+  border-radius: 10px;
+  width: 325px;
+  height: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
