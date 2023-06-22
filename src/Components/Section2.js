@@ -1,7 +1,28 @@
 import React from "react";
 import "./CSS/Section2.css";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 
-const Section2 = () => {
+const Section2 = ({ setUser }) => {
+  const login = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        const data = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${tokenResponse.access_token}`,
+            },
+          }
+        );
+        // console.log(data.data);
+        setUser(data.data["name"]);
+      } catch (error) {
+        console.log("Getting User Data Error");
+      }
+    },
+  });
+
   return (
     <div className="container grid grid-rows-auto gap-6">
       <div className="heading-text">
@@ -10,7 +31,10 @@ const Section2 = () => {
       </div>
 
       <div className="grid grid-flow-col auto-col-max gap-3">
-        <button className="flex items-center justify-center gap-2">
+        <button
+          className="flex items-center justify-center gap-2"
+          onClick={() => login()}
+        >
           <img
             src="https://freepngimg.com/save/66274-school-google-pearl-button-up-sign-middle/1600x1600"
             alt="google logo"
@@ -19,6 +43,7 @@ const Section2 = () => {
           />
           Sign Up with Google
         </button>
+
         <button className="flex items-center justify-center gap-2">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/1200px-Apple_logo_grey.svg.png"
@@ -70,7 +95,6 @@ const Section2 = () => {
           </div>
         </div>
       </div>
-
       <div className="heading-text text-center">
         <p>Don't have an account ? Register Here</p>
       </div>

@@ -42,10 +42,8 @@ button {
 }
 
 .login-container {
-  /* margin-top: -20px; */
   background-color: #ffffff;
   border-radius: 20px;
-  /* padding: 20px; */
   width: 385px;
 }
 
@@ -54,13 +52,11 @@ button {
   padding-right: 30px;
   padding-top: 25px;
   padding-bottom: 30px;
-  /* padding-bottom: 20px; */
 }
 
 .inputBox {
   border: 2px solid #f5f5f5;
   background-color: #f5f5f5;
-  /* width: 325px; */
   height: 40px;
   font-family: "Lato", sans-serif;
   font-size: 17px;
@@ -68,7 +64,6 @@ button {
 
 .inputBox2 {
   background-color: #eaeaea;
-  /* width: 325px; */
   height: 40px;
   font-family: "Lato", sans-serif;
 }
