@@ -18,43 +18,41 @@ const Page = () => {
 
   return (
     <>
-      <div className="flex h-screen overflow-hidden">
-        {/* Left Column */}
-        <div className="w-2/4 flex justify-center items-center">
-          <img
-            src="Board.png"
-            alt="left-side"
-            className="max-h-fit max-w-full"
-          />
+      <div className="h-screen overflow-hidden">
+        <div className="hidden md:block">
+          <div className="w-1/3 h-screen bg-black flex justify-center items-center float-left">
+            <img
+              src="Board.png"
+              alt="left-side"
+              className="max-h-fit max-w-full"
+            />
+            {/* <h1 className="text-white text-center text-4xl font-bold">Board.</h1> */}
+          </div>
         </div>
 
-        {!storedData ? (
-          <div className="w-2/3">
-            <div className="flex justify-center items-center h-full rightBG">
-              <Section2 />
-            </div>
-          </div>
-        ) : (
-          <div className="w-2/3">
-            <div className="flex justify-center items-center h-full rightBG">
-              <div className="grid grid-row-auto gap-2">
+        <div className="lg:w-2/2 flex justify-center items-center h-full rightBG">
+          {!storedData ? (
+            <Section2 handleLogout={handleLogout} defaultImg={default_img} />
+          ) : (
+            <div className="grid grid-row-auto gap-2">
+              {!storedData.picture ? null : (
                 <img
                   className="mx-auto"
-                  src={storedData.picture ? storedData.picture : default_img}
+                  src={storedData.picture}
                   alt=""
                   width="100px"
                 />
-                <h2 className="text-center">Hello {storedData.name}</h2>
-                <button
-                  className="flex items-center justify-center gap-2"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </button>
-              </div>
+              )}
+              <h2 className="text-center">Hello {storedData.name}</h2>
+              <button
+                className="flex items-center justify-center gap-2"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );
