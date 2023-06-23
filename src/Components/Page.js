@@ -30,7 +30,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="lg:w-2/2 flex justify-center items-center h-full rightBG">
+        <div className="lg:w-2/2 flex overflow-hidden justify-center items-center h-full rightBG">
           {!storedData ? (
             <Section2 handleLogout={handleLogout} defaultImg={default_img} />
           ) : (
