@@ -1,9 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CSS/Section2.css";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import sampleUserDatabase from "../SampleUserDatabase.json";
 
-const Section2 = ({ setUser }) => {
+const Section2 = () => {
+  const [userInput, setUserInput] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleEmailInputChange = (event) => {
+    setUserInput((prevState) => ({
+      ...prevState,
+      email: event.target.value,
+    }));
+  };
+
+  const handlePasswordInputChange = (event) => {
+    setUserInput((prevState) => ({
+      ...prevState,
+      password: event.target.value,
+    }));
+  };
+
+  const handleButton = (e) => {
+    e.preventDefault();
+    // console.log(userInput);
+    const userCheck = sampleUserDatabase.find((data) => {
+      return (
+        userInput.email === data.user_email &&
+        userInput.password === data.user_password
+      );
+    });
+
+    if (userCheck !== undefined) {
+      localStorage.setItem("user", JSON.stringify(userCheck));
+      window.location.reload();
+    } else {
+      alert("Incorrect Credentials! Please try again");
+    }
+  };
+
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -15,13 +53,19 @@ const Section2 = ({ setUser }) => {
             },
           }
         );
-        // console.log(data.data);
-        setUser(data.data["name"]);
+
+        localStorage.setItem("user", JSON.stringify(data.data));
+        window.location.reload();
       } catch (error) {
         console.log("Getting User Data Error");
       }
     },
   });
+
+  const handleAppleLogin = (e) => {
+    e.preventDefault();
+    alert("Feature coming soon");
+  };
 
   return (
     <div className="container grid grid-rows-auto gap-6">
@@ -44,7 +88,10 @@ const Section2 = ({ setUser }) => {
           Sign Up with Google
         </button>
 
-        <button className="flex items-center justify-center gap-2">
+        <button
+          className="flex items-center justify-center gap-2"
+          onClick={handleAppleLogin}
+        >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/1200px-Apple_logo_grey.svg.png"
             alt="google logo"
@@ -66,6 +113,7 @@ const Section2 = ({ setUser }) => {
                 type="text"
                 name="email"
                 id="email"
+                onChange={handleEmailInputChange}
                 className="block w-full rounded-md border-0 py-1.5 pl-7 pr-8 inputBox"
                 placeholder="Enter your Email"
               />
@@ -80,6 +128,7 @@ const Section2 = ({ setUser }) => {
                 type="password"
                 name="pass"
                 id="pass"
+                onChange={handlePasswordInputChange}
                 className="block w-full rounded-md border-0 py-1.5 pl-7 pr-8 text-gray-900 inputBox2"
                 placeholder="Enter your Password"
               />
@@ -91,7 +140,9 @@ const Section2 = ({ setUser }) => {
           </div>
 
           <div>
-            <button className="sign-in-btn">Sign In</button>
+            <button className="sign-in-btn" onClick={handleButton}>
+              Sign In
+            </button>
           </div>
         </div>
       </div>

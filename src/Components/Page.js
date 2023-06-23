@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 // import Section1 from "./Section1";
 import Section2 from "./Section2";
 
 import "./CSS/Page.css";
 
 const Page = () => {
-  const [user, setUser] = useState("");
+  const storedData = JSON.parse(localStorage.getItem("user"));
+  console.log(storedData);
+  const handleLogout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem("user");
+    window.location.reload();
+  };
+
+  const default_img =
+    "https://lordicon.com/icons/wired/lineal/268-avatar-man.svg";
 
   return (
     <>
@@ -19,27 +28,27 @@ const Page = () => {
           />
         </div>
 
-        {!user ? (
+        {!storedData ? (
           <div className="w-2/3">
             <div className="flex justify-center items-center h-full rightBG">
-              <Section2 setUser={setUser} />
+              <Section2 />
             </div>
           </div>
         ) : (
           <div className="w-2/3">
             <div className="flex justify-center items-center h-full rightBG">
-              <div className="grid grid-row-auto gap-4">
-                <h2 className="text-center">Hello {user}</h2>
+              <div className="grid grid-row-auto gap-2">
+                <img
+                  className="mx-auto"
+                  src={storedData.picture ? storedData.picture : default_img}
+                  alt=""
+                  width="100px"
+                />
+                <h2 className="text-center">Hello {storedData.name}</h2>
                 <button
                   className="flex items-center justify-center gap-2"
-                  onClick={() => setUser("")}
+                  onClick={handleLogout}
                 >
-                  <img
-                    src="https://freepngimg.com/save/66274-school-google-pearl-button-up-sign-middle/1600x1600"
-                    alt="google logo"
-                    width="20px"
-                    height="20px"
-                  />
                   Logout
                 </button>
               </div>
