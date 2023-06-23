@@ -56,7 +56,7 @@ const Chart = () => {
           <LineChart data={data}>
             <CartesianGrid
               stroke="#ccc"
-              strokeDasharray="3 3"
+              // strokeDasharray="3 3"
               horizontal
               vertical={false}
             />
