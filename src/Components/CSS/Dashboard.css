@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.dashboardContainer {
+  padding-left: 30px;
+  padding-right: 60px;
+}
+
+.dashboardContainer h1 {
+  color: #000;
+  font-size: 24px;
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+.searchBar {
+  display: flex;
+  width: 180px;
+  height: 30px;
+  border-radius: 14px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-shrink: 0;
+
+  color: var(--light-grey, #b0b0b0);
+  font-size: 14px;
+  font-family: Lato;
+
+  outline: none;
+}
+
+.cards {
+  padding-top: 40px;
+}
