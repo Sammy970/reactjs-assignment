@@ -2,7 +2,8 @@ import React from "react";
 import "./CSS/Dashboard.css";
 
 import SmCards from "./DashboardComponents/SmCards";
-import Chart from "./Chart";
+import Chart from "./DashboardComponents/Chart";
+import PieChartCard from "./DashboardComponents/PieChartCard";
 
 const Dashboard = () => {
   return (
@@ -60,6 +61,16 @@ const Dashboard = () => {
 
         <div className="chartContainer">
           <Chart />
+        </div>
+
+        <div className="grid grid-flow-col grid-cols-2 ">
+          <div className="pieContainer">
+            <PieChartCard />
+          </div>
+
+          <div className="pieContainer">
+            <PieChartCard />
+          </div>
         </div>
       </div>
     </>

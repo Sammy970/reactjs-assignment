@@ -36,9 +36,13 @@
 
 .chartContainer {
   padding-top: 30px;
-  margin-left: 13px;
+  /* margin-left: 13px; */
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
   /* width: 100%; */
+}
+
+.pieContainer {
+  padding-top: 30px;
 }

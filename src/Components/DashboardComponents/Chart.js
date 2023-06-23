@@ -34,11 +34,11 @@ const Chart = () => {
       <div
         style={{
           width: "95%",
-          height: "280px",
+          height: "250px",
           backgroundColor: "#FFFFFF",
           padding: "10px",
           borderRadius: "10px",
-          paddingBottom: "30px"
+          paddingBottom: "50px",
         }}
       >
         <h1
@@ -47,7 +47,7 @@ const Chart = () => {
             fontSize: "18px",
             fontFamily: "Montserrat",
             fontWeight: 700,
-            padding: "14px"
+            padding: "14px",
           }}
         >
           Activites
@@ -63,7 +63,7 @@ const Chart = () => {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Legend />
+            <Legend verticalAlign="top" align="right" />
             <Line
               type="monotone"
               dataKey="uv"

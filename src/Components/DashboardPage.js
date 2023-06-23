@@ -11,7 +11,7 @@ const DashboardPage = () => {
       <div className=" w-1/4 sidebar flex justify-center items-center float-left">
         <Sidebar />
       </div>
-      <div className="w-3/4 flex">
+      <div className="w-3/4 flex  float-right">
         <Dashboard />
       </div>
     </div>
