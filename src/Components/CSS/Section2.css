@@ -79,7 +79,7 @@ button {
   font-family: "Montserrat", sans-serif;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   h1,
   p {
     padding-left: 10px;

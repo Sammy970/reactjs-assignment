@@ -68,7 +68,7 @@ const Section2 = () => {
   };
 
   return (
-    <div className="container grid grid-rows-auto gap-6">
+    <div className="container overflow-hidden grid grid-rows-auto gap-6">
       <div className="heading-text">
         <h1>Sign In</h1>
         <p>Sign in to your account</p>
