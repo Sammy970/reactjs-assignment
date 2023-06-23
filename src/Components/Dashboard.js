@@ -2,6 +2,7 @@ import React from "react";
 import "./CSS/Dashboard.css";
 
 import SmCards from "./DashboardComponents/SmCards";
+import Chart from "./Chart";
 
 const Dashboard = () => {
   return (
@@ -55,6 +56,10 @@ const Dashboard = () => {
             color="#EFDADA"
           />
           <SmCards smallTitle="Total Users" NumberValue="892" color="#DEE0EF" />
+        </div>
+
+        <div className="chartContainer">
+          <Chart />
         </div>
       </div>
     </>
