@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Sidebar */}
-      <div className="container-bg h-full flex flex-col justify-between">
+      <div className="container-bg h-screen flex flex-col justify-between">
         <div className="grid grid-auto-row gap-3">
           <h1 className="companyName">Board.</h1>
           <div className="options">
