@@ -4,6 +4,7 @@ import "./CSS/Dashboard.css";
 import SmCards from "./DashboardComponents/SmCards";
 import Chart from "./DashboardComponents/Chart";
 import PieChartCard from "./DashboardComponents/PieChartCard";
+import ScheduleCard from "./DashboardComponents/ScheduleCard";
 
 const Dashboard = () => {
   return (
@@ -13,10 +14,7 @@ const Dashboard = () => {
           <h1 className="col-span-2">Dashboard</h1>
           <div className="flex space-x-7 justify-end items-center col-span-3 col-end-7">
             <button className="flex justify-center items-center searchBar">
-              <input
-                type="text"
-                placeholder="Search..."
-              />
+              <input type="text" placeholder="Search..." />
               <img
                 src="https://cdn.iconscout.com/icon/free/png-256/free-search-1289-433864.png"
                 alt=""
@@ -25,10 +23,10 @@ const Dashboard = () => {
               />
             </button>
             <img
-              src="https://cdn.icon-icons.com/icons2/2091/PNG/512/bell_icon_128467.png"
+              src="Assets/Vector3.png"
               alt=""
-              width="25px"
-              height="51px"
+              width="23px"
+              // height="51px"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Product_sample_icon_picture.png/800px-Product_sample_icon_picture.png"
@@ -44,18 +42,26 @@ const Dashboard = () => {
             smallTitle="Total Revenues"
             NumberValue="$2,129,430"
             color="#DDEFE0"
+            icon="Assets/Vector.png"
           />
           <SmCards
             smallTitle="Total Transactions"
             NumberValue="1520"
             color="#F4ECDD"
+            icon="Assets/total_transactions_icon.png"
           />
           <SmCards
             smallTitle="Total Likes"
             NumberValue="9721"
             color="#EFDADA"
+            icon="Assets/Vector1.png"
           />
-          <SmCards smallTitle="Total Users" NumberValue="892" color="#DEE0EF" />
+          <SmCards
+            smallTitle="Total Users"
+            NumberValue="892"
+            color="#DEE0EF"
+            icon="Assets/Vector2.png"
+          />
         </div>
 
         <div className="chartContainer">
@@ -68,7 +74,7 @@ const Dashboard = () => {
 
         <div className="pieContainer grid grid-cols-1 grid-rows-2 gap-6 md:grid-cols-2 md:grid-rows-1 xl:gap-20">
           <PieChartCard />
-          <PieChartCard />
+          <ScheduleCard />
         </div>
       </div>
     </>

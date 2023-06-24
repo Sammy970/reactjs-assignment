@@ -10,28 +10,26 @@ const DashboardPage = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg flex">
-      <div className=" justify-center items-center float-left">
+    <div className="bg flex h-screen">
+      <div className="contain justify-center items-center float-left">
         <FiMenu
-          className="lg:hidden block h-9 w-9 px-2 cursor-pointer"
+          className="xl:hidden block h-9 w-9 px-2 cursor-pointer"
           onClick={() => setOpen(!open)}
         />
       </div>
 
       {open && (
-        <div className="w-max sidebar flex justify-center items-center float-left">
+        <div className="w-max contain sidebar flex justify-center items-center">
           <Sidebar />
         </div>
       )}
 
-      <div className="lg:block hidden w-1/4 sidebar flex justify-center items-center float-left">
+      <div className="xl:block hidden xl:w-1/4 w-full sidebar flex justify-center items-center float-left">
         <Sidebar />
       </div>
 
       <div
-        className={`lg:block ${
-          open && "hidden"
-        } lg:w-3/4  lg:h-screen sm:h-max xl:flex`}
+        className={`lg:block ${open && "hidden"} lg:w-full sm:h-max xl:flex`}
       >
         <Dashboard />
       </div>

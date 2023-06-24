@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .container-bg {
@@ -18,13 +18,24 @@
   padding-bottom: 30px;
 }
 
-.options h3 {
+.options {
   padding-left: 50px;
-  padding-bottom: 20px;
   color: #fff;
   font-size: 18px;
-  font-family: Montserrat;
-  /* font-weight: 700; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.options div {
+  padding-bottom: 40px;
+}
+
+.options h3 {
+  /* padding-bottom: 20px; */
+  color: #fff;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 .bottomOptions h3 {
@@ -32,5 +43,6 @@
   padding-bottom: 20px;
   color: #fff;
   font-size: 14px;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }

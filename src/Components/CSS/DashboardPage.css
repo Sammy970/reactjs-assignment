@@ -18,3 +18,7 @@
 .dashboardContainer {
   padding-top: 30px;
 }
+
+.contain {
+  height: 100vh;
+}
