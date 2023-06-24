@@ -19,7 +19,7 @@ const DashboardPage = () => {
       </div>
 
       {open && (
-        <div className="w-max h-screen sidebar flex justify-center items-center float-left">
+        <div className="w-max sidebar flex justify-center items-center float-left">
           <Sidebar />
         </div>
       )}
