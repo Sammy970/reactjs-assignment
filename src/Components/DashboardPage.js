@@ -11,9 +11,9 @@ const DashboardPage = () => {
 
   return (
     <div className="bg flex">
-      <div className="py-3 justify-center items-center float-left">
+      <div className=" justify-center items-center float-left">
         <FiMenu
-          className="lg:hidden block h-9 w-9 cursor-pointer"
+          className="lg:hidden block h-9 w-9 px-2 cursor-pointer"
           onClick={() => setOpen(!open)}
         />
       </div>
