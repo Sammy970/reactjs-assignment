@@ -24,10 +24,10 @@ const PieChartCard = () => {
   }, []);
 
   return (
-    <div className="cardContainer flex grid grid-flow-row grid-rows-auto ">
-      <div className="flex grid grid-flow-col grid-cols-auto gap-6 cardContents">
-        <h2>Top Products</h2>
-        <div className="col-end-7">
+    <div className="rounded-[10px] bg-white px-6 py-6">
+      <div className="flex justify-between">
+        <h3 class="text-lg font-bold">Top products</h3>
+        <div>
           <select className=" ">
             <option value="option1">May - June 23</option>
             <option value="option2">June - July 23</option>
@@ -36,16 +36,16 @@ const PieChartCard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2">
-        <div>
+      <div className="mt-5 grid grid-cols-2 items-center">
+        <div style={{ height: "150px" }}>
           <ResponsiveContainer width={300}>
             <PieChart>
               <Pie
                 data={data}
                 dataKey="value"
-                cx={100}
+                cx={60}
                 // cy={150}
-                outerRadius={76}
+                outerRadius={60}
                 fill="#8884d8"
               >
                 {data.map((entry, index) => (
@@ -58,11 +58,10 @@ const PieChartCard = () => {
             </PieChart>
           </ResponsiveContainer>
         </div>
-
         <div
           style={{
             alignSelf: "center",
-            marginLeft: "-10px",
+            marginLeft: "20px",
           }}
         >
           {data.map((entry, index) => (

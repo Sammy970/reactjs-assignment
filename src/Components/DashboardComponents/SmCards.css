@@ -9,6 +9,12 @@
   height: 120px;
 }
 
+@media (max-width: 640px) {
+  .card {
+    width: 80;
+  }
+}
+
 .logo {
   position: absolute;
   top: 20px;

@@ -8,9 +8,9 @@ import PieChartCard from "./DashboardComponents/PieChartCard";
 const Dashboard = () => {
   return (
     <>
-      <div className="dashboardContainer">
-        <div className="grid grid-cols-4">
-          <h1 className="col-span-1">Dashboard</h1>
+      <div className="dashboardContainer sm:h-screen">
+        <div className="xl:grid grid-cols-4">
+          <h1 className="col-span-2">Dashboard</h1>
           <div className="flex space-x-7 justify-end items-center col-span-3 col-end-7">
             <button className="flex justify-center items-center">
               <input
@@ -40,7 +40,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="cards grid grid-cols-4">
+        <div className="cards grid md:grid-cols-4 gap-9 sm:grid-rows-4 justify-center sm:flex">
           <SmCards
             smallTitle="Total Revenues"
             NumberValue="$2,129,430"
@@ -63,14 +63,13 @@ const Dashboard = () => {
           <Chart />
         </div>
 
-        <div className="grid grid-flow-col grid-cols-2 ">
-          <div className="pieContainer">
-            <PieChartCard />
-          </div>
+        {/* <div className="grid grid-flow-col grid-cols-2 pieContainer lg:block">
+          <PieChartCard />
+        </div> */}
 
-          <div className="pieContainer">
-            <PieChartCard />
-          </div>
+        <div className="pieContainer grid grid-cols-1 grid-rows-2 gap-6 md:grid-cols-2 md:grid-rows-1 xl:gap-20">
+          <PieChartCard />
+          <PieChartCard />
         </div>
       </div>
     </>

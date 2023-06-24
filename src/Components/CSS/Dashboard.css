@@ -5,6 +5,19 @@
   padding-right: 60px;
 }
 
+@media (max-width: 640px) {
+  .dashboardContainer {
+    /* padding-right: 10px; */
+  }
+  .pieContainer {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .dashboardContainer h1 {
   color: #000;
   font-size: 24px;
