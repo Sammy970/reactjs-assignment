@@ -1,11 +1,11 @@
 [
   {
-    "user_email": "jainsamyak2002.sj@gmail.com",
+    "email": "jainsamyak2002.sj@gmail.com",
     "user_password": "1234",
     "name": "Samyak Jain"
   },
   {
-    "user_email": "johndoe@gmail.com",
+    "email": "johndoe@gmail.com",
     "user_password": "1234",
     "name": "John Doe"
   }

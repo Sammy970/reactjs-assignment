@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CSS/Dashboard.css";
 
 import SmCards from "./DashboardComponents/SmCards";
 import Chart from "./DashboardComponents/Chart";
 import PieChartCard from "./DashboardComponents/PieChartCard";
 import ScheduleCard from "./DashboardComponents/ScheduleCard";
+import ProfileClickCard from "./ProfileClickCard";
 
 const Dashboard = () => {
+  const [profileCardOpen, setProfileCardOpen] = useState(false);
+
+  const storedData = JSON.parse(localStorage.getItem("user"));
+  // console.log(storedData);
+  const default_img =
+    "https://lordicon.com/icons/wired/lineal/268-avatar-man.svg";
+
   return (
     <>
       <div className="dashboardContainer sm:h-screen">
@@ -29,13 +37,22 @@ const Dashboard = () => {
               // height="51px"
             />
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Product_sample_icon_picture.png/800px-Product_sample_icon_picture.png"
+              src={
+                storedData.picture !== undefined
+                  ? storedData.picture
+                  : default_img
+              }
               alt=""
               width="30px"
               height="51px"
+              onClick={() => setProfileCardOpen(!profileCardOpen)}
             />
           </div>
         </div>
+
+        {profileCardOpen && (
+          <ProfileClickCard name={storedData.name} email={storedData.email} />
+        )}
 
         <div className="cards grid md:grid-cols-4 gap-9 sm:grid-rows-4 justify-center sm:flex">
           <SmCards

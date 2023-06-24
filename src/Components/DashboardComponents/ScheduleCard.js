@@ -4,8 +4,8 @@ const ScheduleCard = () => {
   return (
     <>
       <div className="rounded-[10px] bg-white cards px-6 py-6">
-        <div class="flex justify-between">
-          <h3 class="text-lg font-bold">Today’s schedule</h3>
+        <div className="flex justify-between">
+          <h3 className="text-lg font-bold">Today’s schedule</h3>
           <div>
             <select className=" ">
               <option value="option1">See All</option>
@@ -15,26 +15,26 @@ const ScheduleCard = () => {
           </div>
         </div>
 
-        <div class=" mt-5 flex flex-col gap-y-3">
-          <div class="border-l-4 border-[#9BDD7C] py-1 pl-3">
-            <h4 class="font-lato lg:text-lg sm:text-sm font-bold">
+        <div className=" mt-5 flex flex-col gap-y-3">
+          <div className="border-l-4 border-[#9BDD7C] py-1 pl-3">
+            <h4 className="font-lato lg:text-lg sm:text-sm font-bold">
               Check operation at Giga Factory 1
             </h4>
-            <div class="font-lato lg:text-md sm:text-sm text-[#999999]">
+            <div className="font-lato lg:text-md sm:text-sm text-[#999999]">
               18.00-20.00
             </div>
-            <div class="font-lato lg:text-md sm:text-sm text-[#999999]">
+            <div className="font-lato lg:text-md sm:text-sm text-[#999999]">
               at Central Jakarta
             </div>
           </div>
-          <div class="border-l-4 border-[#9BD] py-1 pl-3">
-            <h4 class="font-lato lg:text-lg sm:text-sm  font-bold">
+          <div className="border-l-4 border-[#9BD] py-1 pl-3">
+            <h4 className="font-lato lg:text-lg sm:text-sm  font-bold">
               Meeting with suppliers from Kuta Bali
             </h4>
-            <div class="font-lato lg:text-md sm:text-sm text-[#999999]">
+            <div className="font-lato lg:text-md sm:text-sm text-[#999999]">
               14.00-15.00
             </div>
-            <div class="font-lato lg:text-md sm:text-sm text-[#999999]">
+            <div className="font-lato lg:text-md sm:text-sm text-[#999999]">
               at Sunset Road, Kuta, Bali
             </div>
           </div>

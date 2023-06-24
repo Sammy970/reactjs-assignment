@@ -29,7 +29,7 @@ const Section2 = () => {
     // console.log(userInput);
     const userCheck = sampleUserDatabase.find((data) => {
       return (
-        userInput.email === data.user_email &&
+        userInput.email === data.email &&
         userInput.password === data.user_password
       );
     });
