@@ -26,7 +26,7 @@ const PieChartCard = () => {
   return (
     <div className="rounded-[10px] bg-white px-6 py-6">
       <div className="flex justify-between">
-        <h3 class="text-lg font-bold">Top products</h3>
+        <h3 className="text-lg font-bold">Top products</h3>
         <div>
           <select className=" ">
             <option value="option1">May - June 23</option>
@@ -61,7 +61,7 @@ const PieChartCard = () => {
         <div
           style={{
             alignSelf: "center",
-            marginLeft: "20px",
+            marginLeft: "-9px",
           }}
         >
           {data.map((entry, index) => (

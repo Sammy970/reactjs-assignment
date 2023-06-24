@@ -28,20 +28,24 @@
 }
 
 .searchBar {
-  display: flex;
-  width: 180px;
+  /* display: flex; */
+  width: 200px;
   height: 30px;
   border-radius: 14px;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  flex-shrink: 0;
+  padding-left: 50px;
+  padding-right: 40px;
+  /* flex-shrink: 0; */
+}
 
+input {
   color: var(--light-grey, #b0b0b0);
   font-size: 14px;
   font-family: Lato;
 
+  margin-right: 30px;
+  margin-left: 24px;
   outline: none;
 }
 

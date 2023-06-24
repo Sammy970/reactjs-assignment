@@ -12,17 +12,16 @@ const Dashboard = () => {
         <div className="xl:grid grid-cols-4">
           <h1 className="col-span-2">Dashboard</h1>
           <div className="flex space-x-7 justify-end items-center col-span-3 col-end-7">
-            <button className="flex justify-center items-center">
+            <button className="flex justify-center items-center searchBar">
               <input
                 type="text"
-                className="searchBar"
                 placeholder="Search..."
               />
               <img
                 src="https://cdn.iconscout.com/icon/free/png-256/free-search-1289-433864.png"
                 alt=""
                 width="20px"
-                className="relative right-8"
+                className="relative right-6"
               />
             </button>
             <img
